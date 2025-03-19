@@ -1,0 +1,257 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1246px;
+    width: 100%;
+    margin-top: 214px;
+    position: relative; /* Позволяет позиционировать .imageBlock */
+    overflow: visible; /* Дает возможность дочерним элементам выходить за границы */
+}
+
+.heroLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 195px;
+    height: 1px;
+    background-color: #201F1F;
+    opacity: 20%;
+}
+
+.textBlock {
+    flex: none;
+    width: 567px;
+    height: 544px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+/*title*/
+.title {
+    font-family: "Poppins", sans-serif;
+    font-size: 76px;
+    line-height: 84px;
+    letter-spacing: -3px;
+    color: #141416;
+    font-weight: 700;
+}
+/*description*/
+.description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: #606060;
+    margin: 20px 0;
+}
+
+.description .bonus {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+/*buttons*/
+.buttons {
+    margin: 40px 0;
+    display: flex;
+    gap: 20px;
+    width: 342px;
+    height: 60px;
+    border-radius: 12px;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.btn:first-child { /* Черная кнопка */
+    width: 180px;
+    height: 60px;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 12px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    text-transform: uppercase;
+}
+
+
+.secondary { /* Белая кнопка */
+    width: 140px;
+    height: 60px;
+    background: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 12px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    text-transform: uppercase;
+
+    transition: background 0.3s ease; /* Плавный переход */
+}
+
+.secondary:hover {
+    background: #D7D7D7;
+}
+
+
+/*stats*/
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 435px;
+    height: 68px;
+    margin-top: 50px;
+}
+
+.statNumber {
+    height: 42px;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #141416;
+}
+
+.statLabel {
+    width: 65px;
+    height: 16px;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #848586;
+}
+
+/*imageBlock*/
+.imageBlock {
+    position: absolute;
+    right: -150px;
+    width: 780px;
+    height: 544px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* Основное изображение */
+.nftImage {
+    width: 391px;
+    height: 395px;
+    border-radius: 20px;
+    position: absolute;
+    left: -40px;
+    top: -70px;
+    z-index: 2; /* Поверх остальных элементов */
+    display: block
+}
+
+/* Псевдоэлемент для тени */
+.nftImageWrapper {
+    position: relative;
+    width: 391px;
+    height: 395px;
+}
+
+.nftImageWrapper::after {
+    content: "";
+    position: absolute;
+    top: -54px; /* Смещение вниз */
+    left: -40px;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/block_one/Rectangle3.png");
+    background-size: cover;
+    opacity: 0.7;
+    filter: blur(4px); /* Размытие для плавности */
+    z-index: -1; /* Помещаем тень под изображение */
+}
+
+.arrowIcon {
+    position: absolute;
+    left: 407px;
+    top: 53px;
+    width: 129px;
+    height: 125px;
+    z-index: 3; /* Выше блюра */
+}
+
+/* Обертка для .nftBlur */
+.nftBlurWrapper {
+    position: relative;
+    width: 320px;
+    height: 322px;
+}
+
+/* Псевдоэлемент для тени .nftBlur */
+.nftBlurWrapper::after {
+    content: "";
+    position: absolute;
+    top: 82px; /* Смещение вниз */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/block_one/Rectangle_2.png");
+    background-size: cover;
+    opacity: 0.7;
+    filter: blur(4px);
+    z-index: -1; /* Помещаем тень под изображение */
+}
+
+/* Стили для самого изображения .nftBlur */
+.nftBlur {
+    width: 320px;
+    height: 322px;
+    border-radius: 20px;
+    position: absolute;
+    left: 97px;  /* Смещение к центру */
+    bottom: -65px;
+    transform: translateX(-30%);
+    z-index: 1; /* Позади основного изображения */
+}
+
+/* Точки */
+.dotsPattern {
+    width: 173px;
+    height: 400px;
+    position: absolute;
+    left: 602px;
+    top: -21px;
+    z-index: 0; /* Самый задний элемент */
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.header {
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.scrolled {
+    background: white; /* Белый фон при скролле */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    backdrop-filter: none; /* Отключаем размытие */
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1246px;
+    height: 54px;
+    margin: 45px auto ;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+/* Навигация */
+.nav {
+    position: absolute;
+    left: 89px;
+    display: flex;
+    align-items: center;
+    width: 436px;
+    height: 27px;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.navList li a {
+    color: #606060;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.walletBtn {
+    font-size: 16px;
+    background: #141416;
+    color: #ffffff;
+    width: 200px;
+    height: 54px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 16px;
+    text-transform: uppercase;
+}
