@@ -1,8 +1,62 @@
 .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: unset;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slideInRight {
+    animation: slideInFromRight 0.5s ease-in-out 1s forwards;
+}
+
+.animateFadeIn {
+    animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.animateFadeInArrow {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Линия */
+.heroLine {
+    width: 195px;
+    height: 2px;
+    background-color: #201F1F;
+    opacity: 20%;
+    position: absolute;
+    left: 660px;
+}
+
+
+.heroCreators {
+    display: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    color: #201F1F;
 }
 
 .content {
@@ -11,19 +65,8 @@
     align-items: center;
     max-width: 1246px;
     width: 100%;
-    margin-top: 214px;
-    position: relative; /* Позволяет позиционировать .imageBlock */
-    overflow: visible; /* Дает возможность дочерним элементам выходить за границы */
-}
-
-.heroLine {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 195px;
-    height: 1px;
-    background-color: #201F1F;
-    opacity: 20%;
+    margin-top: 20px;
+    position: relative;
 }
 
 .textBlock {
@@ -178,7 +221,7 @@
     position: absolute;
     left: -40px;
     top: -70px;
-    z-index: 2; /* Поверх остальных элементов */
+    z-index: 2;
     display: block
 }
 
@@ -192,15 +235,15 @@
 .nftImageWrapper::after {
     content: "";
     position: absolute;
-    top: -54px; /* Смещение вниз */
+    top: -54px;
     left: -40px;
     width: 100%;
     height: 100%;
     background: url("../../assets/block_one/Rectangle3.png");
     background-size: cover;
     opacity: 0.7;
-    filter: blur(4px); /* Размытие для плавности */
-    z-index: -1; /* Помещаем тень под изображение */
+    filter: blur(4px);
+    z-index: -1;
 }
 
 .arrowIcon {
@@ -209,7 +252,7 @@
     top: 53px;
     width: 129px;
     height: 125px;
-    z-index: 3; /* Выше блюра */
+    z-index: 3;
 }
 
 /* Обертка для .nftBlur */
@@ -231,7 +274,7 @@
     background-size: cover;
     opacity: 0.7;
     filter: blur(4px);
-    z-index: -1; /* Помещаем тень под изображение */
+    z-index: -1;
 }
 
 /* Стили для самого изображения .nftBlur */
@@ -240,10 +283,10 @@
     height: 322px;
     border-radius: 20px;
     position: absolute;
-    left: 97px;  /* Смещение к центру */
+    left: 97px;
     bottom: -65px;
     transform: translateX(-30%);
-    z-index: 1; /* Позади основного изображения */
+    z-index: 1;
 }
 
 /* Точки */
@@ -253,5 +296,344 @@
     position: absolute;
     left: 602px;
     top: -21px;
-    z-index: 0; /* Самый задний элемент */
+    z-index: -1;
 }
+
+
+@media (max-width: 1440px) {
+    .hero {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 0 96px;
+    }
+
+    .heroLineContainer {
+        padding-top: 20px;
+        top: 130px;
+        left: 212px;
+    }
+
+    .heroLine {
+        width: 138px;
+        position: absolute;
+        left: 102px;
+    }
+
+    .content {
+        max-width: 1025px;
+        margin-top: 20px;
+    }
+
+    .textBlock {
+        position: relative;
+        left: -101px;
+    }
+
+    .imageBlock {
+        position: relative;
+        left: 0;
+        width: 780px;
+        height: 544px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .heroLineContainer {
+        top: 50px;
+        left: 204px;
+    }
+
+    .heroLine {
+        width: 138px;
+    }
+
+    .content {
+        max-width: 1025px;
+        margin-top: 60px;
+    }
+
+    .textBlock {
+        left: 0px;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    .title {
+        font-size: 54px;
+        line-height: 62px;
+        letter-spacing: -2px;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .description .bonus {
+        font-size: 16px;
+    }
+
+    .buttons {
+        margin: 30px 0;
+        width: 246px;
+        height: 42px;
+    }
+
+    .btn {
+        font-size: 12px;
+        height: 42px;
+        border-radius: 8px;
+    }
+    /* Черная кнопка */
+    .btn:first-child {
+        font-size: 12px;
+        width: 130px;
+        height: 42px;
+        border-radius: 8px;
+    }
+    /* Белая кнопка */
+    .secondary {
+        width: 100px;
+        height: 42px;
+    }
+
+    .stats {
+        width: 308px;
+        height: 51px;
+        margin-top: 30px;
+    }
+
+    .statNumber {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .statLabel {
+        font-size: 9px;
+        line-height: 13px;
+        text-align: left;
+    }
+
+    .imageBlock {
+        width: 555px;
+        height: 390px;
+    }
+
+    /* Основное изображение */
+    .nftImage {
+        width: 280px;
+        height: 280px;
+        border-radius: 20px;
+        left: 60px;
+        top: -70px;
+    }
+
+    /* Обертка для nftImage */
+    .nftImageWrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .nftImageWrapper::after {
+        top: -54px;
+        left: 60px;
+    }
+
+    /* второе изобразение */
+    .nftBlur {
+        width: 230px;
+        height: 230px;
+        border-radius: 20px;
+        left: 146px;
+        bottom: -65px;
+    }
+
+    /* Обертка для .nftBlur */
+    .nftBlurWrapper {
+        position: relative;
+        width: 230px;
+        height: 230px;
+    }
+
+    /* Псевдоэлемент для тени .nftBlur */
+    .nftBlurWrapper::after {
+        top: 80px;
+        left: 79px;
+    }
+
+    /* Стрелка */
+    .arrowIcon {
+        left: 343px;
+        width: 92px;
+        height: 89px;
+    }
+
+    .dotsPattern {
+        width: 123px;
+        height: 284px;
+        left: 508px;
+        top: -36px;
+        z-index: -1;
+    }
+}
+
+
+@media (max-width: 375px) {
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heroLineContainer {
+        position: relative;
+        top: 20px;
+        left: 5px;
+    }
+
+    .heroLine {
+        width: 33px;
+        margin: 5px;
+        left: -49px;
+    }
+
+    .heroCreators {
+        display: block;
+        width: 120px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+
+    }
+
+    .textBlock {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: left;
+    }
+
+    .title {
+        font-size: 48px;
+        line-height: 54px;
+        letter-spacing: -2px;
+    }
+
+    .description {
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    .description .bonus {
+        font-size: 11px;
+    }
+
+    .buttons {
+        margin: 30px 0;
+        width: 244px;
+        height: 47px;
+    }
+
+    /* Черная кнопка */
+    .btn:first-child {
+        font-size: 12px;
+        width: 128px;
+        height: 47px;
+    }
+    /* Белая кнопка */
+    .secondary {
+        width: 99px;
+        height: 47px;
+    }
+
+    .stats {
+        display: none;
+    }
+
+    .imageBlock {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 40px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Основное изображение */
+    .nftImage {
+        width: 210px;
+        height: 210px;
+        border-radius: 20px;
+        position: absolute;
+        left: -58px;
+    }
+
+    /* Обертка для nftImage */
+    .nftImageWrapper {
+        width: 210px;
+        height: 210px;
+    }
+
+    .nftImageWrapper::after {
+        top: -54px;
+        left: -58px;
+    }
+
+    /* второе изобразение */
+    .nftBlur {
+        width: 170px;
+        height: 170px;
+        border-radius: 20px;
+        position: absolute;
+        top: -173px;
+        left: 200px;
+    }
+
+    /* Обертка для .nftBlur */
+    .nftBlurWrapper {
+        position: relative;
+        width: 170px;
+        height: 170px;
+    }
+
+    /* Псевдоэлемент для тени .nftBlur */
+    .nftBlurWrapper::after {
+        top: -158px;
+        left: 151px;
+    }
+
+    /* Стрелка */
+    .arrowIcon {
+        position: absolute;
+        top: -17px;
+        left: 144px;
+        width: 58px;
+        height: 56px;
+    }
+
+    /* Декоративные точки */
+    .dotsPattern {
+        width: 93px;
+        height: 213px;
+        position: absolute;
+        top: -80px;
+        left: 250px;
+    }
+}
+
+

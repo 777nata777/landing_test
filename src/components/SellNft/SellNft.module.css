@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     padding: 30px;
-    border-radius: 15.79px;
+    border-radius: 40px;
 }
 
 .textContainer {
@@ -78,3 +78,103 @@
     height: 249px;
     border-radius: 16px;
 }
+
+@media (max-width: 1024px) {
+    .content {
+        width: 886px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .textContainer h2 {
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .textContainer p {
+        font-size: 18px;
+        line-height: 20px;
+        margin: 15px 0;
+    }
+
+    .buttons {
+        gap: 15px;
+        margin-top: 50px;
+    }
+
+    .whiteButton,
+    .blackButton {
+        width: 160px;
+        height: 58px;
+        font-size: 16px;
+    }
+
+    .image {
+        width: 320px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 375px) {
+    .content {
+        background-color: #ffffff;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+    }
+
+    .textContainer {
+        height: 211px;
+        background-color: black;
+        padding: 10px 20px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .textContainer h2 {
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+    }
+
+    .textContainer p {
+        font-size: 10px;
+        line-height: 18px;
+        margin: 10px 0;
+
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: -5px;
+    }
+
+    .whiteButton,
+    .blackButton {
+        width: 140px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .imageContainer {
+        position: relative;
+        margin-top: -41px;
+
+    }
+
+    .image {
+        width: 280px;
+        height: 190px;
+        border-radius: 12px;
+    }
+}
+

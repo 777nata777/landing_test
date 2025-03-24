@@ -19,7 +19,7 @@
 .brandContainer {
     display: flex;
     align-items: center;
-    gap: 10px; /* Отступ между логотипом и DiveSea */
+    gap: 10px;
 }
 
 .logo {
@@ -102,4 +102,101 @@
 
 .socialIcons img:hover {
     opacity: 0.8;
+}
+
+.socialIconsSvg {
+    cursor: pointer;
+    fill: #535353
+}
+
+.socialIconsSvg:hover {
+    fill: white;
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .footerTop {
+        width: 886px;
+    }
+
+    .brandName {
+        font-size: 24px;
+    }
+
+    .footerMenu a {
+        font-size: 16px;
+    }
+
+    .footerLine {
+        width: 886px;
+    }
+
+    .footerBottom {
+        width: 886px;
+        font-size: 14px;
+    }
+
+    .socialIcons img {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+@media (max-width: 375px) {
+    .footer {
+        width: 375px;
+        height: 426px;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerTop {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: start;
+        position: relative;
+        left: -89px;
+    }
+
+    .footerMenu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+
+    }
+
+    .footerLine {
+        position: relative;
+        top: 180px;
+        width: 100%;
+        margin: 20px 0;
+        order: 2;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        width: 100%;
+        order: 3;
+    }
+
+    .p {
+        position: relative;
+        top: 133px;
+    }
+
+    .socialIcons {
+        position: relative;
+        top: -197px;
+        left: 110px;
+    }
+
 }

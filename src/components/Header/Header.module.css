@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 .header {
     font-family: 'Inter', sans-serif;
-    position: fixed;
-    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
     z-index: 9999;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    background: white;
+    transition: background 0.3s;
 }
 
 .scrolled {
-    background: white; /* Белый фон при скролле */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
-    backdrop-filter: none; /* Отключаем размытие */
-
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: none;
+    transition: box-shadow 0.3s ease;
 }
 
 .container {
@@ -22,21 +25,56 @@
     align-items: center;
     width: 1246px;
     height: 54px;
-    margin: 45px auto ;
+    margin: 15px auto ;
     position: relative;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
+/*logo*/
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 53px;
+    height: 53px;
+}
+
+.brandName {
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-left: 12px;
+    vertical-align: middle;
+}
 
 /* Навигация */
 .nav {
-    position: absolute;
-    left: 89px;
     display: flex;
     align-items: center;
-    width: 436px;
-    height: 27px;
+    gap: 350px;
+    padding-right: 202px;
+}
+
+/* меню только при открытом бургере */
+.nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
 }
 
 .navList {
@@ -52,6 +90,11 @@
     text-transform: uppercase;
 }
 
+.socialIcons {
+    display: none; /* Скрываем на больших экранах */
+}
+
+/* Кнопка */
 .walletBtn {
     font-size: 16px;
     background: #141416;
@@ -63,4 +106,255 @@
     cursor: pointer;
     border-radius: 16px;
     text-transform: uppercase;
+}
+
+/* Бургер-меню */
+.burger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+/* Бургер-линии */
+.burgerLine {
+    width: 30px;
+    height: 4px;
+    background: black;
+    position: absolute;
+    margin: 18px 5px;
+    transition: transform 0.3s;
+}
+
+.burgerLine::before,
+.burgerLine::after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background: black;
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.burgerLine::before {
+    top: -10px;
+    left: 0px;
+}
+
+.burgerLine::after {
+    top: 10px;
+    right: 0px;
+}
+
+
+
+/* Анимация крестика */
+.burger.open .burgerLine:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 0px);
+}
+
+.burger.open .burgerLine:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open .burgerLine:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* Линия */
+.underline {
+    width: 315px;
+    height: 0;
+    border-bottom: 1px solid #CBCBCB;
+    margin: 0 auto;
+    display: none;
+}
+
+
+@media (max-width: 1440px) {
+    .nav {
+        padding-right: 118px;
+        gap: 368px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 89px;
+    }
+
+    .nav {
+        padding-right: 346px;
+        gap: 400px;
+    }
+
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .navList {
+        gap: 20px;
+    }
+
+    .navList li a {
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .walletBtn {
+        font-size: 12px;
+        width: 140px;
+        height: 40px;
+        padding: 10px 11px;
+        border-radius: 12px;
+
+    }
+
+}
+
+@media (max-width: 375px) {
+    .header {
+        padding: 0 30px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .container {
+        width: 315px;
+        height: 46px;
+    }
+
+    .logo {
+        width: 46px;
+        height: 46px;
+    }
+
+    .brandName {
+        display: inline-block;
+    }
+
+    .nav {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: top 0.3s ease-in-out;
+        z-index: 10000;
+    }
+
+    .nav.open {
+        top: 136px;
+    }
+
+    .navList {
+        position: absolute;
+        top: 70px;
+        left: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style: none;
+    }
+
+    .navList li a {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: #606060;
+        text-decoration: none;
+    }
+
+    /* Блок иконок */
+    .socialIcons {
+        position: absolute;
+        top: 349px;
+        left: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 216px;
+        height: 24px;
+        gap: 20px;
+
+    }
+
+    .socialIcons img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .burger {
+        display: flex;
+    }
+
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .burgerLine {
+        width: 30px;
+        height: 4px;
+        background: black;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .burger.open .burgerLine {
+        transform: rotate(45deg);
+    }
+
+    .burger.open .burgerLine::before {
+        transform: rotate(-90deg) translate(-11px, -1px);
+    }
+
+    .burger.open .burgerLine::after {
+        display: none;
+    }
+
+    .walletBtn {
+        position: absolute;
+        left: 20px;
+        bottom: 170px;
+        font-size: 16px;
+        width: 316px;
+        height: 60px;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 15px;
+    }
+
+    .underline {
+        display: block;
+        padding-top: 30px;
+    }
+
 }
