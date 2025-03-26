@@ -22,6 +22,8 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  console.log("Styles object:", styles);
+
   return (
     <header className={cn(styles.header, { [styles.scrolled]: scrolled })}>
       <div className={styles.container}>
