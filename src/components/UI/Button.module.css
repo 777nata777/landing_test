@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+
+.button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Черная кнопка */
+.buttonBlack {
+    background: #141416;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.buttonBlack:hover {
+    background: #D7D7D7;
+    color: #000000;
+    border-color: #000000;
+}
+
+/* Белая кнопка */
+.buttonWhite {
+    background: #ffffff ;
+    color: #141416;
+    border-color: #141416;
+}
+
+.buttonWhite:hover {
+    background: #D7D7D7;
+    color: #000000;
+    border-color: #000000;
+}
+
+/* Разные размеры кнопок */
+.HeaderButton {
+    width: 200px;
+    height: 54px;
+    border-radius: 16px;
+}
+
+.HeroButton {
+    width: 180px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 14px;
+}
+.sellNftButton {
+    width: 180px;
+    height: 68px;
+    font-size: 21px;
+    border-radius: 12px;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+    .HeaderButton {
+        width: 140px;
+        height: 40px;
+        padding: 0 0;
+        font-size: 12px;
+        border-radius: 12px;
+    }
+
+    .HeroButton {
+        width: 130px;
+        height: 42px;
+        padding: 0 0;
+        font-size: 14px;
+        border-radius: 9px;
+    }
+
+    .sellNftButton {
+        width: 135px;
+        height: 51px;
+        padding: 0 0;
+        font-size: 16px;
+        border-radius: 9px;
+    }
+}
+
+@media (max-width: 375px) {
+    .HeaderButton {
+        width: 316px;
+        height: 60px;
+        font-size: 15px;
+    }
+
+    .HeroButton {
+        width: 128px;
+        height: 42px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+    .sellNftButton {
+        width: 91px;
+        height: 34px;
+        font-size: 10px;
+        border-radius: 6px;
+    }
+}
+
+

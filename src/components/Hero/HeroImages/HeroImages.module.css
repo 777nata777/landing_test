@@ -1,0 +1,267 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: unset;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slideInRight {
+    animation: slideInFromRight 0.5s ease-in-out 1s forwards;
+}
+
+.animateFadeIn {
+    animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.animateFadeInArrow {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.imageBlock {
+    position: absolute;
+    right: -150px;
+    width: 780px;
+    height: 544px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* Основное изображение */
+.nftImage {
+    width: 391px;
+    height: 395px;
+    border-radius: 20px;
+    position: absolute;
+    left: -40px;
+    top: -70px;
+    z-index: 2;
+    display: block
+}
+
+/* Псевдоэлемент для тени */
+.nftImageWrapper {
+    position: relative;
+    width: 391px;
+    height: 395px;
+}
+
+.nftImageWrapper::after {
+    content: "";
+    position: absolute;
+    top: -54px;
+    left: -40px;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/block_one/Rectangle3.png");
+    background-size: cover;
+    opacity: 0.7;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.arrowIcon {
+    position: absolute;
+    left: 407px;
+    top: 53px;
+    width: 129px;
+    height: 125px;
+    z-index: 3;
+}
+
+/* Обертка для .nftBlur */
+.nftBlurWrapper {
+    position: relative;
+    width: 320px;
+    height: 322px;
+}
+
+/* Псевдоэлемент для тени .nftBlur */
+.nftBlurWrapper::after {
+    content: "";
+    position: absolute;
+    top: 82px; /* Смещение вниз */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/block_one/Rectangle_2.png");
+    background-size: cover;
+    opacity: 0.7;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+/* Стили для самого изображения .nftBlur */
+.nftBlur {
+    width: 320px;
+    height: 322px;
+    border-radius: 20px;
+    position: absolute;
+    left: 97px;
+    bottom: -65px;
+    transform: translateX(-30%);
+    z-index: 1;
+}
+
+/* Точки */
+.dotsPattern {
+    width: 173px;
+    height: 400px;
+    position: absolute;
+    left: 602px;
+    top: -21px;
+    z-index: -1;
+}
+
+
+@media (max-width: 1024px) {
+    .imageBlock {
+        width: 555px;
+        height: 390px;
+    }
+
+    /* Основное изображение */
+    .nftImage {
+        width: 280px;
+        height: 280px;
+        border-radius: 20px;
+        left: 60px;
+        top: -70px;
+    }
+
+    /* Обертка для nftImage */
+    .nftImageWrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .nftImageWrapper::after {
+        top: -54px;
+        left: 60px;
+    }
+
+    /* второе изобразение */
+    .nftBlur {
+        width: 230px;
+        height: 230px;
+        border-radius: 20px;
+        left: 146px;
+        bottom: -65px;
+    }
+
+    /* Обертка для .nftBlur */
+    .nftBlurWrapper {
+        position: relative;
+        width: 230px;
+        height: 230px;
+    }
+
+    /* Псевдоэлемент для тени .nftBlur */
+    .nftBlurWrapper::after {
+        top: 80px;
+        left: 79px;
+    }
+
+    /* Стрелка */
+    .arrowIcon {
+        left: 343px;
+        width: 92px;
+        height: 89px;
+    }
+
+    .dotsPattern {
+        width: 123px;
+        height: 284px;
+        left: 508px;
+        top: -36px;
+        z-index: -1;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .imageBlock {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 40px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Основное изображение */
+    .nftImage {
+        width: 210px;
+        height: 210px;
+        border-radius: 20px;
+        position: absolute;
+        left: -58px;
+    }
+
+    /* Обертка для nftImage */
+    .nftImageWrapper {
+        width: 210px;
+        height: 210px;
+    }
+
+    .nftImageWrapper::after {
+        top: -54px;
+        left: -58px;
+    }
+
+    /* второе изобразение */
+    .nftBlur {
+        width: 170px;
+        height: 170px;
+        border-radius: 20px;
+        position: absolute;
+        top: -173px;
+        left: 200px;
+    }
+
+    /* Обертка для .nftBlur */
+    .nftBlurWrapper {
+        position: relative;
+        width: 170px;
+        height: 170px;
+    }
+
+    /* Псевдоэлемент для тени .nftBlur */
+    .nftBlurWrapper::after {
+        top: -158px;
+        left: 151px;
+    }
+
+    /* Стрелка */
+    .arrowIcon {
+        position: absolute;
+        top: -17px;
+        left: 144px;
+        width: 58px;
+        height: 56px;
+    }
+
+    /* Декоративные точки */
+    .dotsPattern {
+        width: 93px;
+        height: 213px;
+        position: absolute;
+        top: -80px;
+        left: 250px;
+    }
+}

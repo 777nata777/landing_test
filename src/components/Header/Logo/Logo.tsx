@@ -1,24 +1,18 @@
-import { useState, useEffect } from "react";
+import { LogoIcon } from "./LogoIcon";
+import { cn } from "@/lib/utils.ts";
 import styles from "./Logo.module.css";
-import logo from "../../assets/header/Logo.png";
 
 interface LogoProps {
-    withText?: boolean; // Можно передавать пропс вручную
+    className?: string;
+    isFooter?: boolean;
 }
 
-export const Logo = ({ withText }: LogoProps) => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
-
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 375);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
+export const Logo = ({ className, isFooter = false }: LogoProps) => {
     return (
-        <div className={styles.logoContainer}>
-            <img src={logo} alt="Logo" className={styles.logo} />
-            {(withText ?? isMobile) && <span className={styles.brandName}>DiveSea</span>}
+        <div className={cn(isFooter ? styles.footerLogoContainer : styles.headerLogoContainer, className)}>
+            <LogoIcon className={cn(isFooter ? styles.footerLogoIcon : styles.headerLogoIcon)} />
+            {!isFooter && <span className={styles.headerBrandName}>DiveSea</span>}
+            {isFooter && <span className={styles.footerBrandName}>DiveSea</span>}
         </div>
     );
 };

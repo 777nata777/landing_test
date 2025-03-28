@@ -1,34 +1,116 @@
-/*logo*/
-.logoContainer {
+/*header*/
+.headerLogoContainer {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
 }
 
-.logo {
+.headerLogoIcon {
     width: 53px;
     height: 53px;
 }
 
-.brandName {
-    display: none;
+.headerBrandName {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 22px;
     line-height: 24px;
-    letter-spacing: 0px;
-    margin-left: 12px;
     vertical-align: middle;
+    display: none;
+}
+
+/*footer*/
+.footerLogoContainer {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.footerLogoIcon {
+    width: 65px;
+    height: 65px;
+    filter: brightness(0) invert(1); /* Делаем логотип белым */
+}
+
+.footerBrandName {
+    font-size: 30px;
+    color: #FFFFFF;
 }
 
 @media (max-width: 1440px) {
-
+    .headerLogoContainer {
+        height: 65px;
+        margin: 0 50px;
+    }
 }
 
-@media (max-width: 1024px) {
 
+@media (max-width: 1024px) {
+    .headerLogoContainer {
+        height: 46px;
+        width: 82px;
+    }
+
+    .headerLogoIcon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .headerBrandName {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 24px;
+        vertical-align: middle;
+    }
+    /**/
+    .footerLogoContainer {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .footerLogoIcon {
+        width: 30px;
+        height: 30px;
+    }
+    .footerBrandName {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 375px) {
+    .headerLogoContainer {
+        height: 46px;
+        width: 144px;
+        margin: 0 0;
+    }
 
+    .headerLogoIcon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .headerBrandName {
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 24px;
+        vertical-align: middle;
+    }
+    /**/
+    .footerLogoContainer {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .footerLogoIcon {
+        width: 35px;
+        height: 35px;
+    }
+    .footerBrandName {
+        font-size: 14px;
+    }
 }

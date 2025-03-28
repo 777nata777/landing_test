@@ -6,37 +6,37 @@
 
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: unset;
-    }
-}
+/*@keyframes fadeIn {*/
+/*    from {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    to {*/
+/*        opacity: unset;*/
+/*    }*/
+/*}*/
 
-@keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+/*@keyframes slideInFromRight {*/
+/*    from {*/
+/*        opacity: 0;*/
+/*        transform: translateX(100%);*/
+/*    }*/
+/*    to {*/
+/*        opacity: 1;*/
+/*        transform: translateX(0);*/
+/*    }*/
+/*}*/
 
-.slideInRight {
-    animation: slideInFromRight 0.5s ease-in-out 1s forwards;
-}
+/*.slideInRight {*/
+/*    animation: slideInFromRight 0.5s ease-in-out 1s forwards;*/
+/*}*/
 
-.animateFadeIn {
-    animation: fadeIn 300ms ease-in-out forwards;
-}
+/*.animateFadeIn {*/
+/*    animation: fadeIn 300ms ease-in-out forwards;*/
+/*}*/
 
-.animateFadeInArrow {
-    animation: fadeIn 2s ease-in-out forwards;
-}
+/*.animateFadeInArrow {*/
+/*    animation: fadeIn 2s ease-in-out forwards;*/
+/*}*/
 
 /* Линия */
 .heroLine {
@@ -69,235 +69,161 @@
     position: relative;
 }
 
-.textBlock {
-    flex: none;
-    width: 567px;
-    height: 544px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 100px;
-}
-/*title*/
-.title {
-    font-family: "Poppins", sans-serif;
-    font-size: 76px;
-    line-height: 84px;
-    letter-spacing: -3px;
-    color: #141416;
-    font-weight: 700;
-}
-/*description*/
-.description {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0px;
-    color: #606060;
-    margin: 20px 0;
-}
-
-.description .bonus {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0px;
-    color: #000000;
-}
-
-/*buttons*/
-.buttons {
-    margin: 40px 0;
-    display: flex;
-    gap: 20px;
-    width: 342px;
-    height: 60px;
-    border-radius: 12px;
-}
-
-.btn {
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-}
-
-.btn:first-child { /* Черная кнопка */
-    width: 180px;
-    height: 60px;
-    background: black;
-    color: white;
-    border: 2px solid black;
-    border-radius: 12px;
-
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 1%;
-    text-transform: uppercase;
-}
 
 
-.secondary { /* Белая кнопка */
-    width: 140px;
-    height: 60px;
-    background: white;
-    color: black;
-    border: 2px solid black;
-    border-radius: 12px;
 
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 1%;
-    text-transform: uppercase;
 
-    transition: background 0.3s ease; /* Плавный переход */
-}
+/*.btn {*/
+/*    font-size: 16px;*/
+/*    font-weight: 600;*/
+/*    cursor: pointer;*/
+/*    border-radius: 12px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    height: 60px;*/
+/*}*/
 
-.secondary:hover {
-    background: #D7D7D7;
-}
+/*.btn:first-child { !* Черная кнопка *!*/
+/*    width: 180px;*/
+/*    height: 60px;*/
+/*    background: black;*/
+/*    color: white;*/
+/*    border: 2px solid black;*/
+/*    border-radius: 12px;*/
+
+/*    font-family: "Poppins", sans-serif;*/
+/*    font-weight: 500;*/
+/*    font-size: 16px;*/
+/*    line-height: 100%;*/
+/*    letter-spacing: 1%;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+
+/*.secondary { !* Белая кнопка *!*/
+/*    width: 140px;*/
+/*    height: 60px;*/
+/*    background: white;*/
+/*    color: black;*/
+/*    border: 2px solid black;*/
+/*    border-radius: 12px;*/
+
+/*    font-family: "Poppins", sans-serif;*/
+/*    font-weight: 500;*/
+/*    font-size: 16px;*/
+/*    line-height: 100%;*/
+/*    letter-spacing: 1%;*/
+/*    text-transform: uppercase;*/
+
+/*    transition: background 0.3s ease; !* Плавный переход *!*/
+/*}*/
+
+/*.secondary:hover {*/
+/*    background: #D7D7D7;*/
+/*}*/
 
 
 /*stats*/
-.stats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 435px;
-    height: 68px;
-    margin-top: 50px;
-}
 
-.statNumber {
-    height: 42px;
-    font-family: "Public Sans", sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    color: #141416;
-}
-
-.statLabel {
-    width: 65px;
-    height: 16px;
-
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0px;
-    text-align: center;
-    color: #848586;
-}
 
 /*imageBlock*/
-.imageBlock {
-    position: absolute;
-    right: -150px;
-    width: 780px;
-    height: 544px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: visible;
-}
+/*.imageBlock {*/
+/*    position: absolute;*/
+/*    right: -150px;*/
+/*    width: 780px;*/
+/*    height: 544px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    overflow: visible;*/
+/*}*/
 
-/* Основное изображение */
-.nftImage {
-    width: 391px;
-    height: 395px;
-    border-radius: 20px;
-    position: absolute;
-    left: -40px;
-    top: -70px;
-    z-index: 2;
-    display: block
-}
+/*!* Основное изображение *!*/
+/*.nftImage {*/
+/*    width: 391px;*/
+/*    height: 395px;*/
+/*    border-radius: 20px;*/
+/*    position: absolute;*/
+/*    left: -40px;*/
+/*    top: -70px;*/
+/*    z-index: 2;*/
+/*    display: block*/
+/*}*/
 
-/* Псевдоэлемент для тени */
-.nftImageWrapper {
-    position: relative;
-    width: 391px;
-    height: 395px;
-}
+/*!* Псевдоэлемент для тени *!*/
+/*.nftImageWrapper {*/
+/*    position: relative;*/
+/*    width: 391px;*/
+/*    height: 395px;*/
+/*}*/
 
-.nftImageWrapper::after {
-    content: "";
-    position: absolute;
-    top: -54px;
-    left: -40px;
-    width: 100%;
-    height: 100%;
-    background: url("../../assets/block_one/Rectangle3.png");
-    background-size: cover;
-    opacity: 0.7;
-    filter: blur(4px);
-    z-index: -1;
-}
+/*.nftImageWrapper::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: -54px;*/
+/*    left: -40px;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: url("../../assets/block_one/Rectangle3.png");*/
+/*    background-size: cover;*/
+/*    opacity: 0.7;*/
+/*    filter: blur(4px);*/
+/*    z-index: -1;*/
+/*}*/
 
-.arrowIcon {
-    position: absolute;
-    left: 407px;
-    top: 53px;
-    width: 129px;
-    height: 125px;
-    z-index: 3;
-}
+/*.arrowIcon {*/
+/*    position: absolute;*/
+/*    left: 407px;*/
+/*    top: 53px;*/
+/*    width: 129px;*/
+/*    height: 125px;*/
+/*    z-index: 3;*/
+/*}*/
 
-/* Обертка для .nftBlur */
-.nftBlurWrapper {
-    position: relative;
-    width: 320px;
-    height: 322px;
-}
+/*!* Обертка для .nftBlur *!*/
+/*.nftBlurWrapper {*/
+/*    position: relative;*/
+/*    width: 320px;*/
+/*    height: 322px;*/
+/*}*/
 
-/* Псевдоэлемент для тени .nftBlur */
-.nftBlurWrapper::after {
-    content: "";
-    position: absolute;
-    top: 82px; /* Смещение вниз */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("../../assets/block_one/Rectangle_2.png");
-    background-size: cover;
-    opacity: 0.7;
-    filter: blur(4px);
-    z-index: -1;
-}
+/*!* Псевдоэлемент для тени .nftBlur *!*/
+/*.nftBlurWrapper::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 82px; !* Смещение вниз *!*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: url("../../assets/block_one/Rectangle_2.png");*/
+/*    background-size: cover;*/
+/*    opacity: 0.7;*/
+/*    filter: blur(4px);*/
+/*    z-index: -1;*/
+/*}*/
 
-/* Стили для самого изображения .nftBlur */
-.nftBlur {
-    width: 320px;
-    height: 322px;
-    border-radius: 20px;
-    position: absolute;
-    left: 97px;
-    bottom: -65px;
-    transform: translateX(-30%);
-    z-index: 1;
-}
+/*!* Стили для самого изображения .nftBlur *!*/
+/*.nftBlur {*/
+/*    width: 320px;*/
+/*    height: 322px;*/
+/*    border-radius: 20px;*/
+/*    position: absolute;*/
+/*    left: 97px;*/
+/*    bottom: -65px;*/
+/*    transform: translateX(-30%);*/
+/*    z-index: 1;*/
+/*}*/
 
-/* Точки */
-.dotsPattern {
-    width: 173px;
-    height: 400px;
-    position: absolute;
-    left: 602px;
-    top: -21px;
-    z-index: -1;
-}
+/*!* Точки *!*/
+/*.dotsPattern {*/
+/*    width: 173px;*/
+/*    height: 400px;*/
+/*    position: absolute;*/
+/*    left: 602px;*/
+/*    top: -21px;*/
+/*    z-index: -1;*/
+/*}*/
 
 
 @media (max-width: 1440px) {
@@ -325,21 +251,7 @@
         margin-top: 20px;
     }
 
-    .textBlock {
-        position: relative;
-        left: -101px;
-    }
 
-    .imageBlock {
-        position: relative;
-        left: 0;
-        width: 780px;
-        height: 544px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: visible;
-    }
 }
 
 
@@ -358,131 +270,89 @@
         margin-top: 60px;
     }
 
-    .textBlock {
-        left: 0px;
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-        margin-bottom: 60px;
-    }
 
-    .title {
-        font-size: 54px;
-        line-height: 62px;
-        letter-spacing: -2px;
-    }
 
-    .description {
-        font-size: 13px;
-        line-height: 18px;
-    }
-
-    .description .bonus {
-        font-size: 16px;
-    }
-
-    .buttons {
-        margin: 30px 0;
-        width: 246px;
-        height: 42px;
-    }
-
-    .btn {
-        font-size: 12px;
-        height: 42px;
-        border-radius: 8px;
-    }
-    /* Черная кнопка */
-    .btn:first-child {
-        font-size: 12px;
-        width: 130px;
-        height: 42px;
-        border-radius: 8px;
-    }
+    /*.btn {*/
+    /*    font-size: 12px;*/
+    /*    height: 42px;*/
+    /*    border-radius: 8px;*/
+    /*}*/
+    /*!* Черная кнопка *!*/
+    /*.btn:first-child {*/
+    /*    font-size: 12px;*/
+    /*    width: 130px;*/
+    /*    height: 42px;*/
+    /*    border-radius: 8px;*/
+    /*}*/
     /* Белая кнопка */
-    .secondary {
-        width: 100px;
-        height: 42px;
-    }
+    /*.secondary {*/
+    /*    width: 100px;*/
+    /*    height: 42px;*/
+    /*}*/
 
-    .stats {
-        width: 308px;
-        height: 51px;
-        margin-top: 30px;
-    }
 
-    .statNumber {
-        font-size: 26px;
-        line-height: 30px;
-    }
 
-    .statLabel {
-        font-size: 9px;
-        line-height: 13px;
-        text-align: left;
-    }
+    /*.imageBlock {*/
+    /*    width: 555px;*/
+    /*    height: 390px;*/
+    /*}*/
 
-    .imageBlock {
-        width: 555px;
-        height: 390px;
-    }
+    /*!* Основное изображение *!*/
+    /*.nftImage {*/
+    /*    width: 280px;*/
+    /*    height: 280px;*/
+    /*    border-radius: 20px;*/
+    /*    left: 60px;*/
+    /*    top: -70px;*/
+    /*}*/
 
-    /* Основное изображение */
-    .nftImage {
-        width: 280px;
-        height: 280px;
-        border-radius: 20px;
-        left: 60px;
-        top: -70px;
-    }
+    /*!* Обертка для nftImage *!*/
+    /*.nftImageWrapper {*/
+    /*    width: 280px;*/
+    /*    height: 280px;*/
+    /*}*/
 
-    /* Обертка для nftImage */
-    .nftImageWrapper {
-        width: 280px;
-        height: 280px;
-    }
+    /*.nftImageWrapper::after {*/
+    /*    top: -54px;*/
+    /*    left: 60px;*/
+    /*}*/
 
-    .nftImageWrapper::after {
-        top: -54px;
-        left: 60px;
-    }
+    /*!* второе изобразение *!*/
+    /*.nftBlur {*/
+    /*    width: 230px;*/
+    /*    height: 230px;*/
+    /*    border-radius: 20px;*/
+    /*    left: 146px;*/
+    /*    bottom: -65px;*/
+    /*}*/
 
-    /* второе изобразение */
-    .nftBlur {
-        width: 230px;
-        height: 230px;
-        border-radius: 20px;
-        left: 146px;
-        bottom: -65px;
-    }
+    /*!* Обертка для .nftBlur *!*/
+    /*.nftBlurWrapper {*/
+    /*    position: relative;*/
+    /*    width: 230px;*/
+    /*    height: 230px;*/
+    /*}*/
 
-    /* Обертка для .nftBlur */
-    .nftBlurWrapper {
-        position: relative;
-        width: 230px;
-        height: 230px;
-    }
+    /*!* Псевдоэлемент для тени .nftBlur *!*/
+    /*.nftBlurWrapper::after {*/
+    /*    top: 80px;*/
+    /*    left: 79px;*/
+    /*}*/
 
-    /* Псевдоэлемент для тени .nftBlur */
-    .nftBlurWrapper::after {
-        top: 80px;
-        left: 79px;
-    }
+    /*!* Стрелка *!*/
+    /*.arrowIcon {*/
+    /*    left: 343px;*/
+    /*    width: 92px;*/
+    /*    height: 89px;*/
+    /*}*/
 
-    /* Стрелка */
-    .arrowIcon {
-        left: 343px;
-        width: 92px;
-        height: 89px;
-    }
-
-    .dotsPattern {
-        width: 123px;
-        height: 284px;
-        left: 508px;
-        top: -36px;
-        z-index: -1;
-    }
+    /*.dotsPattern {*/
+    /*    width: 123px;*/
+    /*    height: 284px;*/
+    /*    left: 508px;*/
+    /*    top: -36px;*/
+    /*    z-index: -1;*/
+    /*}*/
 }
 
 
@@ -519,121 +389,92 @@
 
     }
 
-    .textBlock {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 50px;
-        display: flex;
-        justify-content: left;
-    }
 
-    .title {
-        font-size: 48px;
-        line-height: 54px;
-        letter-spacing: -2px;
-    }
 
-    .description {
-        font-size: 11px;
-        line-height: 18px;
-    }
+    /*!* Черная кнопка *!*/
+    /*.btn:first-child {*/
+    /*    font-size: 12px;*/
+    /*    width: 128px;*/
+    /*    height: 47px;*/
+    /*}*/
+    /*!* Белая кнопка *!*/
+    /*.secondary {*/
+    /*    width: 99px;*/
+    /*    height: 47px;*/
+    /*}*/
 
-    .description .bonus {
-        font-size: 11px;
-    }
 
-    .buttons {
-        margin: 30px 0;
-        width: 244px;
-        height: 47px;
-    }
 
-    /* Черная кнопка */
-    .btn:first-child {
-        font-size: 12px;
-        width: 128px;
-        height: 47px;
-    }
-    /* Белая кнопка */
-    .secondary {
-        width: 99px;
-        height: 47px;
-    }
+    /*.imageBlock {*/
+    /*    width: 100%;*/
+    /*    max-width: 400px;*/
+    /*    margin-top: 40px;*/
+    /*    position: relative;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    align-items: center;*/
+    /*}*/
 
-    .stats {
-        display: none;
-    }
+    /*!* Основное изображение *!*/
+    /*.nftImage {*/
+    /*    width: 210px;*/
+    /*    height: 210px;*/
+    /*    border-radius: 20px;*/
+    /*    position: absolute;*/
+    /*    left: -58px;*/
+    /*}*/
 
-    .imageBlock {
-        width: 100%;
-        max-width: 400px;
-        margin-top: 40px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    /*!* Обертка для nftImage *!*/
+    /*.nftImageWrapper {*/
+    /*    width: 210px;*/
+    /*    height: 210px;*/
+    /*}*/
 
-    /* Основное изображение */
-    .nftImage {
-        width: 210px;
-        height: 210px;
-        border-radius: 20px;
-        position: absolute;
-        left: -58px;
-    }
+    /*.nftImageWrapper::after {*/
+    /*    top: -54px;*/
+    /*    left: -58px;*/
+    /*}*/
 
-    /* Обертка для nftImage */
-    .nftImageWrapper {
-        width: 210px;
-        height: 210px;
-    }
+    /*!* второе изобразение *!*/
+    /*.nftBlur {*/
+    /*    width: 170px;*/
+    /*    height: 170px;*/
+    /*    border-radius: 20px;*/
+    /*    position: absolute;*/
+    /*    top: -173px;*/
+    /*    left: 200px;*/
+    /*}*/
 
-    .nftImageWrapper::after {
-        top: -54px;
-        left: -58px;
-    }
+    /*!* Обертка для .nftBlur *!*/
+    /*.nftBlurWrapper {*/
+    /*    position: relative;*/
+    /*    width: 170px;*/
+    /*    height: 170px;*/
+    /*}*/
 
-    /* второе изобразение */
-    .nftBlur {
-        width: 170px;
-        height: 170px;
-        border-radius: 20px;
-        position: absolute;
-        top: -173px;
-        left: 200px;
-    }
+    /*!* Псевдоэлемент для тени .nftBlur *!*/
+    /*.nftBlurWrapper::after {*/
+    /*    top: -158px;*/
+    /*    left: 151px;*/
+    /*}*/
 
-    /* Обертка для .nftBlur */
-    .nftBlurWrapper {
-        position: relative;
-        width: 170px;
-        height: 170px;
-    }
+    /*!* Стрелка *!*/
+    /*.arrowIcon {*/
+    /*    position: absolute;*/
+    /*    top: -17px;*/
+    /*    left: 144px;*/
+    /*    width: 58px;*/
+    /*    height: 56px;*/
+    /*}*/
 
-    /* Псевдоэлемент для тени .nftBlur */
-    .nftBlurWrapper::after {
-        top: -158px;
-        left: 151px;
-    }
-
-    /* Стрелка */
-    .arrowIcon {
-        position: absolute;
-        top: -17px;
-        left: 144px;
-        width: 58px;
-        height: 56px;
-    }
-
-    /* Декоративные точки */
-    .dotsPattern {
-        width: 93px;
-        height: 213px;
-        position: absolute;
-        top: -80px;
-        left: 250px;
-    }
+    /*!* Декоративные точки *!*/
+    /*.dotsPattern {*/
+    /*    width: 93px;*/
+    /*    height: 213px;*/
+    /*    position: absolute;*/
+    /*    top: -80px;*/
+    /*    left: 250px;*/
+    /*}*/
 }
 
 

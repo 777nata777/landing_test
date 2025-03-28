@@ -1,0 +1,77 @@
+/* Бургер-меню */
+.burger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+/* Бургер-линии */
+.burgerLine {
+    width: 30px;
+    height: 4px;
+    background: black;
+    position: absolute;
+    margin: 18px 5px;
+    transition: transform 0.3s;
+}
+
+.burgerLine::before,
+.burgerLine::after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background: black;
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.burgerLine::before {
+    top: -10px;
+    left: 0;
+}
+
+.burgerLine::after {
+    top: 10px;
+    right: 0px;
+}
+
+
+/* Анимация крестика */
+.burger.open .burgerLine:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 0px);
+}
+
+.burger.open .burgerLine:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open .burgerLine:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 375px) {
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burger.open .burgerLine {
+        transform: rotate(45deg);
+    }
+
+    .burger.open .burgerLine::before {
+        transform: rotate(-90deg) translate(-11px, -1px);
+    }
+
+    .burger.open .burgerLine::after {
+        display: none;
+    }
+
+}
